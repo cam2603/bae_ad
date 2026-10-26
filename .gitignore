@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Biến môi trường / secrets (chỉ commit .env.example)
+.env
+.env.*
+!.env.example
+
+# Kết quả chạy test: ảnh chụp, page source, log
+artifacts/
+logs/
+allure-results/
+allure-report/
+reports/
+coverage/
+*.log
+npm-debug.log*
+
+# File sinh ra khi build / TypeScript
+dist/
+build/
+*.tsbuildinfo
+
+# IDE / hệ điều hành
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db

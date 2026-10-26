@@ -1,0 +1,30 @@
+{
+  "name": "bae-admin-automation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Android UI automation cho BAExpress Admin (Appium 3 + WebdriverIO + Mocha)",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "wdio run ./wdio.conf.ts",
+    "test:ui": "wdio run ./wdio.conf.ts --mochaOpts.grep @ui",
+    "test:validation": "wdio run ./wdio.conf.ts --mochaOpts.grep @validation",
+    "test:auth": "wdio run ./wdio.conf.ts --mochaOpts.grep @auth"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.19.2",
+    "@wdio/appium-service": "^10.1.0",
+    "@wdio/cli": "^10.1.0",
+    "@wdio/globals": "^10.1.0",
+    "@wdio/local-runner": "^10.1.0",
+    "@wdio/mocha-framework": "^10.1.0",
+    "@wdio/spec-reporter": "^10.1.0",
+    "dotenv": "^17.4.2",
+    "typescript": "^5.9.3",
+    "webdriverio": "^10.1.0"
+  }
+}
